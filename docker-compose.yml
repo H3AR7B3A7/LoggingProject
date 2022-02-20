@@ -1,0 +1,15 @@
+version: "3"
+
+services:
+  one:
+    image: 'h3ar7b3a7/one:latest'
+    container_name: 'ONE'
+    ports:
+      - '8080:8080'
+    environment:
+      - DESTINATION_CLIENT=192.168.0.251:8081
+  two:
+    image: 'h3ar7b3a7/two:latest'
+    container_name: 'TWO'
+    ports:
+      - '8081:8080'
