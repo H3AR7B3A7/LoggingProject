@@ -1,5 +1,5 @@
+### Project ###
 target/
-!.mvn/wrapper/maven-wrapper.jar
 !**/src/main/**/target/
 !**/src/test/**/target/
 
@@ -11,6 +11,9 @@ target/
 .settings
 .springBeans
 .sts4-cache
+
+### Maven ###
+**/.mvn/
 
 ### IntelliJ IDEA ###
 .idea
