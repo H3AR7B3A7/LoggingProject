@@ -72,6 +72,7 @@ done
 
 
 echo --- CREATING DOCKER IMAGE AND PUBLISHING TO DOCKER HUB... ---
+mvn -N io.takari:maven:wrapper
 ./mvnw spring-boot:build-image
 docker tag "$PROJECT_ID":"$PROJECT_VERSION" h3ar7b3a7/"$PROJECT_ID":"$CONTAINER_VERSION"
 docker push h3ar7b3a7/"$PROJECT_ID":"$CONTAINER_VERSION"
