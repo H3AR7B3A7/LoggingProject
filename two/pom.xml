@@ -4,7 +4,7 @@
     <modelVersion>4.0.0</modelVersion>
     <parent>
         <groupId>com.example</groupId>
-        <artifactId>logging-parent</artifactId>
+        <artifactId>logging-project</artifactId>
         <version>0.0.1</version>
     </parent>
     <artifactId>two</artifactId>
@@ -15,5 +15,10 @@
         <java.version>11</java.version>
     </properties>
     <dependencies>
+        <dependency>
+            <groupId>com.example</groupId>
+            <artifactId>logging-parent</artifactId>
+            <version>0.0.1</version>
+        </dependency>
     </dependencies>
 </project>

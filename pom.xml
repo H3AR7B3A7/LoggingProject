@@ -6,6 +6,7 @@
     <modules>
         <module>one</module>
         <module>two</module>
+        <module>logging-parent</module>
     </modules>
     <parent>
         <groupId>org.springframework.boot</groupId>
@@ -14,10 +15,10 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>com.example</groupId>
-    <artifactId>logging-parent</artifactId>
+    <artifactId>logging-project</artifactId>
     <version>0.0.1</version>
-    <name>logging-parent</name>
-    <description>logging-parent</description>
+    <name>logging-roject</name>
+    <description>logging-project</description>
     <properties>
         <java.version>11</java.version>
     </properties>
