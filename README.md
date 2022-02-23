@@ -61,4 +61,14 @@ Some interesting qualities of this stack:
 
 ![Graylog stack](graylog.png)
 
-Notice that Graylog needs an instance of MongoDB to store its settings, where LogStash did not.
+Notice that Graylog needs an instance of MongoDB, where LogStash did not.
+
+This is to store:
+- Streams
+- Alerts
+- Users
+- Settings
+- Cached stream counts
+- Everything else you see and edit in the web interface
+
+*But not the logs!*
