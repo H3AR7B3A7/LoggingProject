@@ -1,12 +1,9 @@
 # LoggingProject
 Testing Spring, ELK stack and docker configuration.
 
-## Enter Docker Container
-
-> docker exec -ti ONE /bin/sh
-
 ## Logs in Docker Container
 
+We can use a docker command to get the logs of the container:
 > docker logs -f ContainerName
 
 ## Physical Logs
@@ -16,10 +13,38 @@ Add to `application.properties`:
 logging.file.path=log
 ```
 
+To enter the container:
+> docker exec -ti ONE /bin/sh
+
 Print physical logs:
 > cat workspace/log/spring.log
 
-## ELK stack
+## Docker Volume
+
+When using Maven to build the image:
+> mvn spring-boot:build-image -v /path-to-host:/workspace/log
+
+Or with Docker Compose:
+```
+volumes:
+- /workspace
+```
+
+When running docker on WSL(2) you can find the volumes here:
+> cd \\wsl$\docker-desktop-data\version-pack-data\community\docker\volumes
+
+On Linux:
+> cd /var/lib/docker/volumes/
+
+Or in Docker Desktop in the Volumes tab. 
+
+## Third Party Logging Services
+
+The following stacks are often used to manage, aggregate and visualize a great amount of logs from different services.
+
+### LogStash (ELK stack)
+
+![ELK Stack](elk-stack.png)
 
 - Elasticsearch is a search and analytics engine:
 - Logstash is a tool for managing logs.
@@ -31,3 +56,9 @@ Some interesting qualities of this stack:
 - Scalable
 - Open Source
 - Cloud-Native
+
+### GrayLog (+MongoDB) & Elasticsearch & Kibana
+
+![Graylog stack](graylog.png)
+
+Notice that Graylog needs an instance of MongoDB to store its settings, where LogStash did not.
