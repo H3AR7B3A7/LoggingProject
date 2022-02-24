@@ -57,6 +57,9 @@ Some interesting qualities of this stack:
 - Open Source
 - Cloud-Native
 
+The docker-compose in this repository is an example on how to set up the ELK stack.
+Check [here](Kibana.md) for more information on Kibana.
+
 ### GrayLog (+MongoDB) & Elasticsearch & Kibana
 
 ![Graylog stack](graylog.png)
@@ -72,3 +75,5 @@ This is to store:
 - Everything else you see and edit in the web interface
 
 *But not the logs!*
+
+We can find an example setup [here](https://www.baeldung.com/graylog-with-spring-boot).
