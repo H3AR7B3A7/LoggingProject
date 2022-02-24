@@ -41,6 +41,17 @@ GET _cluster/health
 
 ## Discover App
 
+In the Discover app, we can find the documents for the index pattern we created.
+![Discover Logstash](discover_logstash.png)
+
+We can query the documents using the query bar.
+![Discover Query](discover_query.png)
+
+## KQL
+
+Kibana Query Language is a powerful query language that is used to query Elasticsearch.
+When we use the query bar in the Discover App, it is used to query our data.
+
 
 
 ---
